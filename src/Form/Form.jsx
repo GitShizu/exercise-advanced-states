@@ -11,16 +11,19 @@ export default () => {
     console.log({
       email: { email },
       password: { pwd },
+      gender: { isMale } ? 'Male' : 'Female',
+      color: { selectedColor }
     });
   };
 
   return (
     <>
       <h3>Esrcizio 2</h3>
-      <form action="">
+      <form name="subscription form" action="">
         <label>
           Email
           <input
+            name="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -30,6 +33,7 @@ export default () => {
         <label>
           Password
           <input
+            name="psw"
             type="password"
             value={pwd}
             onChange={(e) => setPwd(e.target.value)}
